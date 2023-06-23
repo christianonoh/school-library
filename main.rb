@@ -32,7 +32,7 @@ def process_choice(choice, app)
   else
     puts 'Invalid choice. Please try again.'
   end
-  choice.zero? ? false : true
+  !choice.zero?
 end
 
 def main
