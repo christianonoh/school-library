@@ -22,19 +22,17 @@ def process_choice(choice, app)
     3 => :create_person,
     4 => :create_book,
     5 => :create_rental,
-    6 => :list_rentals_for_person
+    6 => :list_rentals_for_person,
+    0 => :quit
   }
 
   action = options[choice]
-  if choice.zero?
-    false
-  elsif action
+  if action
     app.send(action)
   else
     puts 'Invalid choice. Please try again.'
   end
-
-  true
+  choice.zero? ? false : true
 end
 
 def main

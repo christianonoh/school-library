@@ -71,12 +71,13 @@ class App
     list_all_people
     print 'Enter the person\'s ID: '
     person_id = gets.chomp.to_i
-    person = @people.find { |p| p.id == person_id }
-    puts 'Person not found.' and return if person.nil?
+    return @people.find { |p| p.id == person_id }
+    
   end
 
   def create_rental
-    select_person
+    person = select_person
+    puts 'Person not found.' and return if person.nil?
     puts 'Select a book to rent:'
     list_all_books
     print 'Enter the book\'s title: '
@@ -116,5 +117,9 @@ class App
         puts "Book: #{rental.book.title}, Date: #{rental.date}"
       end
     end
+  end
+
+  def quit
+    false
   end
 end
