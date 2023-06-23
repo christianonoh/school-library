@@ -11,11 +11,11 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+  <!-- [🚀 Live Demo](#live-demo) -->
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
- <!-- - [Usage](#usage) -->
+ - [Usage](#usage)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -25,7 +25,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 🔑 Morse Decoder <a name="about-project"></a>
+# 📖 UNN Library <a name="about-project"></a>
 
 **UNN Library Management System** is designed to help you manage the books available in the library, keep track of borrowing activities, and maintain records of students and teachers. With this user-friendly tool, you can efficiently organize the library's resources and ensure a smooth borrowing experience for everyone.
 
@@ -33,12 +33,12 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-<details>
+<!-- <details>
   <summary>Client</summary>
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
   </ul>
-</details>
+</details> -->
 
 <details>
   <summary>Server</summary>
@@ -47,12 +47,12 @@
   </ul>
 </details>
 
-<details>
+<!--  <details>
 <summary>Database</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
-</details>
+</details> -->
 
 <!-- Features -->
 
@@ -62,13 +62,13 @@
 - **Book Management:** You can add new books to the library and store essential book information.
 - **Borrowing Records:** The system enables you to record the borrower's information and borrowing date when a book is borrowed. It helps you keep track of the borrowing history of each book, monitor book availability, and manage overdue books.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!--<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+ LIVE DEMO 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Not available yet.
+- Not available yet.-->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,18 +88,17 @@ Ensure you have Ruby installed on your system. You can check by running the code
 
 - Clone or download the UNN Library Management System repository to your local machine.
 - Open your terminal and navigate to the project directory.
-<!--
+
 ### Usage
-- Run the `decoder.rb` script using the Ruby interpreter:
+- Run the `main.rb` script using the Ruby interpreter:
 
 ```sh
-  ruby decoder.rb
+  ruby main.rb
 ```
-- Enter a Morse code message when prompted.
-- The program will output the corresponding English translation of the Morse code message.
+- Enter your desired prompts from the options displayed.
+- The program will process and output your request.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
