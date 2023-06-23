@@ -17,8 +17,8 @@ class App
       puts 'No books available.'
     else
       puts 'All Books:'
-      @books.each do |book|
-        puts "Title: #{book.title} || Author: #{book.author}"
+      @books.each_with_index do |book, index|
+        puts "#{index + 1}. Title: #{book.title}, Author: #{book.author}"
       end
     end
   end
@@ -29,7 +29,7 @@ class App
     else
       puts 'All People:'
       @people.each do |person|
-        puts "ID: #{person.id} || Name: #{person.name} || Type: #{person.class}"
+        puts "ID: #{person.id}, Name: #{person.name}, Age: #{person.age}, Type: #{person.class}"
       end
     end
   end
@@ -42,9 +42,10 @@ class App
     print 'Age: '
     age = gets.chomp
     if res == 1
-      person = Student.new(age, nil, name)
-      puts "Student created successfully. ID: #{person.id}"
-      @people << person
+      print 'Has parent permission? [Y/N]: '
+      parent_permission = gets.chomp.downcase == 'y'
+      person = Student.new(age, nil, name, parent_permission: parent_permission)
+      puts "Student created successfully. ID: #{person.id}, Name: #{person.name}" and @people << person
     elsif res == 2
       print 'Enter the teacher\'s specialization: '
       specialization = gets.chomp
@@ -80,9 +81,9 @@ class App
 
     puts 'Select a book to rent:'
     list_all_books
-    print 'Enter the book\'s title: '
-    title = gets.chomp
-    book = @books.find { |b| b.title == title }
+    print 'Enter the book\'s number: '
+    index = gets.chomp.to_i
+    book = @books[index - 1]
     if book.nil?
       puts 'Book not found.'
       return
