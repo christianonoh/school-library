@@ -45,16 +45,16 @@ class App
       print 'Has parent permission? [Y/N]: '
       parent_permission = gets.chomp.downcase == 'y'
       person = Student.new(age, nil, name, parent_permission: parent_permission)
-      puts "Student created successfully. ID: #{person.id}, Name: #{person.name}" and @people << person
+      puts "Student created successfully. ID: #{person.id}, Name: #{person.name}"
     elsif res == 2
       print 'Enter the teacher\'s specialization: '
       specialization = gets.chomp
       person = Teacher.new(age, specialization, name)
-      puts "Teacher created successfully. ID: #{person.id}"
-      @people << person
+      puts "Teacher created successfully. Name: #{person.name}, ID: #{person.id}"
     else
       puts 'Invalid choice. Person creation failed.'
     end
+    @people << person
   end
 
   def create_book
